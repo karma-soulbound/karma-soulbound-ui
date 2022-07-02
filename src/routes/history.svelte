@@ -18,6 +18,34 @@
       scale: 99,
       pic: 'food.jpeg',
     },
+    {
+      id: 3,
+      title: 'กินข้าวเหลือ',
+      description: 'ไม่มีมุทิตาจิต  ไม่คิดถึงหัวจิตหัวใจของชาวนา',
+      scale: 99,
+      pic: 'food.jpeg',
+    },
+    {
+      id: 4,
+      title: 'กินข้าวเหลือ',
+      description: 'ไม่มีมุทิตาจิต  ไม่คิดถึงหัวจิตหัวใจของชาวนา',
+      scale: 99,
+      pic: 'food.jpeg',
+    },
+    {
+      id: 5,
+      title: 'กินข้าวเหลือ',
+      description: 'ไม่มีมุทิตาจิต  ไม่คิดถึงหัวจิตหัวใจของชาวนา',
+      scale: 99,
+      pic: 'food.jpeg',
+    },
+    {
+      id: 6,
+      title: 'กินข้าวเหลือ',
+      description: 'ไม่มีมุทิตาจิต  ไม่คิดถึงหัวจิตหัวใจของชาวนา',
+      scale: 99,
+      pic: 'food.jpeg',
+    },
   ];
 
   const getData = async () => {
@@ -39,7 +67,7 @@
   console.log(karmaList);
 </script>
 
-<div class='flex flex-col min-h-screen w-full items-center justify-center'>
+<div class='md:grid md:grid-cols-2 flex flex-col place-items-center min-h-screen w-full items-center justify-center gap-2 my-4'>
   {#await getData()}
     Loading...
   {:then _}

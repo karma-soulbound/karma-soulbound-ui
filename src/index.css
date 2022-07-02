@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap');
+
 * {
   @apply duration-200;
-  font-family: 'Comic Sans MS', 'Comic Sans', 'Tahoma', sans-serif;
+  font-family: 'Sarabun', sans-serif;
 }
 
 h1 {
