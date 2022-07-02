@@ -23,7 +23,7 @@
     <div class="p-4">
     <div class="mb-1 text-base font-medium text-red-700">Karma Scale : {scale}</div>
     <div class="w-full bg-gray-200 rounded-full h-2.5">
-      <div class="bg-red-600 h-2.5 rounded-full" style={`width: ${scale}%`} />
+      <div class="bg-red-600 h-2.5 rounded-full {`w-[${scale}%]`}"></div>
     </div>
 </div>
 </div>
