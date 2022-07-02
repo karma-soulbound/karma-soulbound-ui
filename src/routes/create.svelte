@@ -7,7 +7,7 @@
       <div class='flex flex-col gap-2 w-full'>
         <input class='input input-bordered input-primary w-full' placeholder='Input 1' type='text' />
         <input class='input input-bordered input-primary w-full' placeholder='Input 2' type='text' />
-        <input class='input input-bordered input-primary w-full' placeholder='Input เผื่อเฉย ๆ' type='text' />
+        <input type='range'>
       </div>
       <button class='btn btn-success'>
         บันทึกเลอ
