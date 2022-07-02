@@ -8,16 +8,39 @@
       id: 1,
       title: 'หาวบ่อย',
       description: 'เพิ่ม Carbon dioxcide ให้โลกเกินความจำเป็น',
-      scale: 50,
+      scale: 10,
       pic: 'yawn.jpeg',
     },
     {
       id: 2,
       title: 'กินข้าวเหลือ',
       description: 'ไม่มีมุทิตาจิต  ไม่คิดถึงหัวจิตหัวใจของชาวนา',
-      scale: 99,
+      scale: 50,
       pic: 'food.jpeg',
+    },{
+        id: 3,
+      title: 'แก้โค้ดบน Production',
+      description: 'ความจริงมีเพียง branch เดียว',
+      scale: 70,
+      pic: 'bug.png',
+
     },
+    {
+        id: 4,
+      title: 'แก้ไขปัญหาน้ำท่วมช้า',
+      description: 'หากุญแจปั๊มน้ำไม่เจอ',
+      scale: 100,
+      pic: 'flood.jpeg',
+
+    },
+    {
+        id: 5,
+      title: 'ขับเครื่องบินเลี้ยวตีวงกว้างไปหน่อย',
+      description: 'คุณพรี่มาจากประเทศไหนคร้าาาาาาาาา (เขาไม่ได้ล้ำ แค่มาตีวงเลี้ยว)',
+      scale: 1,
+      pic: 'mig29.jpeg',
+
+    }
   ];
 
   const getData = async () => {
@@ -39,10 +62,11 @@
   console.log(karmaList)
 </script>
 
-<div class="flex flex-col min-h-screen w-full items-center justify-center">
+<div class="my-0 py-4 flex flex-col h-[90vh] w-full items-center justify-center bg-[url('hell.jpg')] bg-cover overflow-hidden">
     {#await getData()}
         Loading...
     {:then _}
+    <div class="max-h-screen overflow-y-auto">
     {#each karmaList as karma (karma.id)}
         <KarmaCard
         title={karma.title}
@@ -51,5 +75,6 @@
         pic={karma.pic}
         />
     {/each}
+</div>
   {/await}
 </div>
