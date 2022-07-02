@@ -4,7 +4,7 @@
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal p-0">
-      <li><a href='/'>สำรวจกรรม</a></li>
+      <li><a href='/search'>สำรวจกรรม</a></li>
       <li><a href='/'>สมุดบรรทึกกรรม</a></li>
       <li><a href='/create'>สร้างกรรม</a></li>
     </ul>
