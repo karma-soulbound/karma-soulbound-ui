@@ -1,4 +1,4 @@
-<div class='navbar bg-primary'>
+<div class='navbar bg-white/40'>
   <div class='flex-1'>
     <a class='btn btn-ghost normal-case text-xl' href='/'>SoulBound</a>
   </div>
