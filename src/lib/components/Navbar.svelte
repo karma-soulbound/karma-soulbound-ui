@@ -1,6 +1,6 @@
 <div class='navbar bg-white/40'>
   <div class='flex-1'>
-    <a class='btn btn-ghost normal-case text-xl' href='/'>SoulBound</a>
+    <a class='btn btn-ghost normal-case text-xl' href='/' id='page-title'>SoulBound</a>
   </div>
   <div class='flex-none'>
     <ul class='menu menu-horizontal p-0'>
