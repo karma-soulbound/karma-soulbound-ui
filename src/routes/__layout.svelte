@@ -6,7 +6,7 @@
   import Navbar from '$lib/components/Navbar.svelte';
 </script>
 
-<div class={$darkTheme ? 'dark' : ''}>
+<div class="{$darkTheme ? 'dark' : ''} main min-h-screen">
   <Navbar />
   <Head />
   <slot />

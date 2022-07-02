@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap');
 
+.main {
+  background-image: url('/hell.jpg');
+  background-size: cover;
+}
+
 * {
   @apply duration-200;
   font-family: 'Sarabun', sans-serif;
