@@ -1,4 +1,6 @@
 <script>
+  import { stepName } from '$lib/scale.ts';
+
   export let title;
   export let description;
   export let scale;
@@ -18,6 +20,8 @@
     <div class="flex flex-col justify-between p-4 leading-normal">
     <h2 class="card-title">{title}</h2>
       <p>{description}</p>
+      <progress class="progress progress-error w-full" value={scale} max="100"></progress>
+      {scale}% {stepName[Math.round(scale / 10) * 10]}
     </div>
     </div>
     <div class="p-4">
