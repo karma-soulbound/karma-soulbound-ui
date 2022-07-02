@@ -17,13 +17,13 @@ input {
 }
 
 button {
-    @apply px-4 py-2 bg-blue-500/20 text-blue-500/50 w-full rounded-lg hover:bg-blue-500/30 hover:text-blue-500/60;
+    @apply px-4 py-2 bg-blue-500/20 text-blue-500/70 w-full rounded-lg hover:bg-blue-500/30 hover:text-blue-500/60;
 }
 
 .nav-active {
-    @apply text-white bg-blue-500/80 p-2 rounded-2xl cursor-pointer;
+    @apply text-white bg-white/10 p-2 rounded-[100px] cursor-pointer;
 }
 
 .nav-item {
-    @apply text-white cursor-pointer;
+    @apply text-gray-300 cursor-pointer;
 }
