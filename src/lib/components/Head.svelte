@@ -1,15 +1,15 @@
 <script>
-  let title = "Soulbound"
-  let content = ""
+  let title = 'Soulbound';
+  let content = '';
 </script>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="og:title" content={title}>
-  <meta name="og:description" content={content}>
-  <meta name="og:image" content="">
-  <meta name="og:type" content="website">
-  <meta name="keywords" content="svelte">
+  <meta charset='utf-8'>
+  <meta content='width=device-width, initial-scale=1' name='viewport'>
+  <meta content={title} name='og:title'>
+  <meta content={content} name='og:description'>
+  <meta content='' name='og:image'>
+  <meta content='website' name='og:type'>
+  <meta content='svelte' name='keywords'>
   <title>{title}</title>
 </head>
