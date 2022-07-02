@@ -21,7 +21,7 @@
         <p class='mb-3 font-normal dark:text-gray-700 hover:text-gray-700  text-gray-400 '>{description}</p>
       </div>
       <div class='p-4'>
-        <div class='mb-1 text-base font-medium text-red-700'>Karma Scale : {scale}</div>
+        <div class='mb-1 text-base font-medium text-red-700'>Karma Index : {scale}</div>
         <progress class="progress progress-error w-full" value={scale} max="100"></progress>
       </div>
     </div>
