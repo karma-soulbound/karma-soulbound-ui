@@ -1,8 +1,8 @@
 <script>
-  import { onMount } from 'svelte';
-  import { apiData, karmaLists } from '../lib/store';
+  import { apiData } from '../lib/store';
   import KarmaCard from '$lib/components/KarmaCard.svelte';
-  const karmaList = []
+
+  const karmaList = [];
   const karmaListMock = [
     {
       id: 1,
@@ -22,34 +22,34 @@
 
   const getData = async () => {
     try {
-      const res = await  fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon")
-      const data = await res.json()
-      console.log(data)
+      const res = await fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon');
+      const data = await res.json();
+      console.log(data);
       karmaListMock.forEach(element => {
-        karmaList.push(element)
+        karmaList.push(element);
       });
-      apiData.set(karmaListMock)
-      return karmaListMock
+      apiData.set(karmaListMock);
+      return karmaListMock;
     } catch (error) {
       console.log(error);
       return [];
     }
   };
 
-  console.log(karmaList)
+  console.log(karmaList);
 </script>
 
-<div class="flex flex-col min-h-screen w-full items-center justify-center">
-    {#await getData()}
-        Loading...
-    {:then _}
+<div class='flex flex-col min-h-screen w-full items-center justify-center'>
+  {#await getData()}
+    Loading...
+  {:then _}
     {#each karmaList as karma (karma.id)}
-        <KarmaCard
+      <KarmaCard
         title={karma.title}
         description={karma.description}
         scale={karma.scale}
         pic={karma.pic}
-        />
+      />
     {/each}
   {/await}
 </div>

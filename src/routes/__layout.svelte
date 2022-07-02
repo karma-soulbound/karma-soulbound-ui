@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang='ts'>
   import { darkTheme } from '$lib/store';
   import Head from '$lib/components/Head.svelte';
   import '../tailwind.css';

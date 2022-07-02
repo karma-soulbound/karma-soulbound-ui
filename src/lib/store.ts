@@ -1,8 +1,8 @@
 import { browser } from '$app/env';
-import { writable,derived } from 'svelte/store';
+import { derived, writable } from 'svelte/store';
 
 const storage = browser ? JSON.parse(window.localStorage['soulbound-options'] || '{}') || {} : {};
-export const apiData = writable([])
+export const apiData = writable([]);
 
 function storeSettings() {
   if (browser) {
@@ -17,13 +17,12 @@ darkTheme.subscribe((value) => {
   storeSettings();
 });
 
-
-export const karmaLists = derived(apiData,($apiData) => {
+export const karmaLists = derived(apiData, ($apiData) => {
   // if ($apiData.drinks){
   //   return $apiData.drinks.map(drink => drink.strDrink);
   // }
-  if($apiData.length !== 0) {
-    return apiData
+  if ($apiData.length !== 0) {
+    return apiData;
   }
   return [];
-})
+});

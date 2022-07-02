@@ -5,9 +5,9 @@
         บันทึกวีรกรรม
       </h1>
       <div class='flex flex-col gap-2 w-full'>
-        <input type="text" placeholder="Input 1" class="input input-bordered input-primary w-full" />
-        <input type="text" placeholder="Input 2" class="input input-bordered input-primary w-full" />
-        <input type="text" placeholder="Input เผื่อเฉย ๆ" class="input input-bordered input-primary w-full" />
+        <input class='input input-bordered input-primary w-full' placeholder='Input 1' type='text' />
+        <input class='input input-bordered input-primary w-full' placeholder='Input 2' type='text' />
+        <input class='input input-bordered input-primary w-full' placeholder='Input เผื่อเฉย ๆ' type='text' />
       </div>
       <button class='btn btn-success'>
         บันทึกเลอ

@@ -8,10 +8,19 @@ h1 {
   font-size: 1.5em;
 }
 
-h1, h2, h3, h4, h5, h6, span, input, button, .font-kanit {
-    font-family: 'Kanit', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+input,
+button,
+.font-kanit {
+  font-family: 'Kanit', sans-serif;
 }
 
 ::-webkit-scrollbar {
-    width: 0px
+  width: 0px;
 }
