@@ -16,6 +16,8 @@
 
   export let status;
   export let message;
+
+  console.log(status, message);
 </script>
 
 <!--<div class='grid h-screen place-items-center dark:bg-black'>-->
