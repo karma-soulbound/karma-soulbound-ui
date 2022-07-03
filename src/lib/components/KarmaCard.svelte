@@ -2,6 +2,7 @@
   import { stepName } from '$lib/scale.ts';
   import { signer } from '$lib/wallet.ts';
   import { ethers } from 'ethers';
+  import { goto } from '$app/navigation';
 
   export let title;
   export let description;
@@ -25,7 +26,7 @@
     <div class='card-body flex flex-col justify-between'>
       <div class='flex flex-col gap-1'>
         <h2 class='card-title'>{title}</h2>
-        <p>{description}</p>
+        <p class='break-all'>{description}</p>
       </div>
       <div class='flex flex-col gap-1'>
         <progress class='progress progress-error w-full' max='100' value={scale}></progress>
@@ -34,7 +35,7 @@
           <button class='btn btn-success' on:click={() => ahosigum(scale)}>
             อโหสิกรรม
           </button>
-          <button class='btn btn-error'>
+          <button class='btn btn-error' on:click={() => goto('https://www.youtube.com/watch?v=WqJSF0vxnfg')}>
             กรรมตามสนอง
           </button>
         </div>

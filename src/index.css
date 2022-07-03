@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap');
 
 .main {
-  background-image: url('/hell.jpg');
-  background-size: cover;
+  background-image: url('https://thumbs.gfycat.com/GranularTepidIndri-max-1mb.gif');
+  background-repeat: repeat;
 }
 
 * {
   @apply duration-200;
-  font-family: 'Sarabun', sans-serif;
+  font-family: 'Comic Sans MS', 'Comic Sans', 'Angsana New', sans-serif;
 }
 
 h1 {
@@ -16,4 +16,41 @@ h1 {
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.main {
+  animation: popfuck 1s
+}
+
+@keyframes popfuck {
+  0% {
+    transform: scale(0) rotate(0);
+  }
+  10% {
+    transform: scale(1) rotate(180deg)
+  }
+  20% {
+    transform: scale(0) translate(90px, 199px)
+  }
+  30% {
+    transform: scale(1)
+  }
+  40% {
+    transform: scale(0)
+  }
+  50% {
+    transform: scale(1)
+  }
+  60% {
+    transform: scale(0)
+  }
+  70% {
+    transform: scale(1)
+  }
+  80% {
+    transform: scale(0)
+  }
+  100% {
+    transform: scale(1)
+  }
 }

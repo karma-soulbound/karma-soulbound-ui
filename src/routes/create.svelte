@@ -1,16 +1,20 @@
 <script lang="ts">
   import { stepName } from '$lib/scale.ts';
   import { contracts } from '$lib/contracts';
+  import { BigNumber, ethers } from 'ethers';
 
   let rangeVal: number = 0;
   let addr, kdes;
 
-  function mintKarma() {
+  function mint() {
     if (!addr || !kdes) {
       return alert("Invalid Option")
     }
     try {
-      contracts.mintKarma(addr, rangeVal, kdes)
+      contracts.mintKarma(addr, ethers.utils.parseEther(String(rangeVal)), kdes, {
+        gasLimit: 1000000,
+        gasPrice: ethers.utils.parseUnits("3",9)
+      })
     } catch(e) {
       throw new Error(e);
     }
@@ -30,7 +34,7 @@
         <input type='range' id='karma-idx' class='range range-primary' bind:value={rangeVal}>
         <p>{rangeVal} {stepName[Math.round(rangeVal / 10) * 10]}</p>
       </div>
-      <button class='btn btn-success' on:click={() => mintKarma()}>
+      <button class='btn btn-success' on:click={() => mint()}>
         บันทึกเลอ
       </button>
     </div>
