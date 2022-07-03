@@ -1,6 +1,7 @@
 <script>
   import { apiData } from '../lib/store';
   import KarmaCard from '$lib/components/KarmaCard.svelte';
+  import { contracts } from '$lib/contracts.ts';
 
   const karmaList = [];
   const karmaListMock = [

@@ -1,7 +1,20 @@
 <script lang="ts">
   import { stepName } from '$lib/scale.ts';
+  import { contracts } from '$lib/contracts';
 
   let rangeVal: number = 0;
+  let addr, kdes;
+
+  function mintKarma() {
+    if (!addr || !kdes) {
+      return alert("Invalid Option")
+    }
+    try {
+      contracts.mintKarma(addr, rangeVal, kdes)
+    } catch(e) {
+      throw new Error(e);
+    }
+  }
 </script>
 
 <main class='min-h-screen'>
@@ -11,13 +24,13 @@
         บันทึกเวรกรรม
       </h1>
       <div class='flex flex-col gap-2 w-full'>
-        <input class='input input-bordered input-primary w-full' placeholder='Input 1' type='text' />
-        <input class='input input-bordered input-primary w-full' placeholder='Input 2' type='text' />
+        <input class='input input-bordered input-primary w-full' placeholder='Address คนเลว ๆ' type='text' bind:value={addr} />
+        <input class='input input-bordered input-primary w-full' placeholder='สิ่งที่พวกเขาธรรม' type='text'    bind:value={kdes} />
         <label for='karma-idx'>🔥ความเลว (Karma Index)</label>
         <input type='range' id='karma-idx' class='range range-primary' bind:value={rangeVal}>
         <p>{rangeVal} {stepName[Math.round(rangeVal / 10) * 10]}</p>
       </div>
-      <button class='btn btn-success'>
+      <button class='btn btn-success' on:click={() => mintKarma()}>
         บันทึกเลอ
       </button>
     </div>
