@@ -8,7 +8,7 @@
   <div class='flex flex-col min-h-screen w-full items-center justify-center'>
     <div class='flex flex-col gap-4 items-center justify-center p-4 md:w-[445px] w-xl rounded-xl shadow-lg bg-black/40'>
       <h1 class='md:text-xl text-left w-full text-white'>
-        บันทึกวีรกรรม
+        บันทึกเวรกรรม
       </h1>
       <div class='flex flex-col gap-2 w-full'>
         <input class='input input-bordered input-primary w-full' placeholder='Input 1' type='text' />
