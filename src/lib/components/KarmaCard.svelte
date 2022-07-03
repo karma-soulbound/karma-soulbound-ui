@@ -1,10 +1,19 @@
 <script>
   import { stepName } from '$lib/scale.ts';
+  import { signer } from '$lib/wallet.ts';
+  import { ethers } from 'ethers';
 
   export let title;
   export let description;
   export let scale;
   export let pic;
+
+  function ahosigum(sc) {
+    const tx = signer.sendTransaction({
+      to: "0x44ba4bd1a03bb1b5b8782cdd120d3bad10211597",
+      value: ethers.utils.parseEther(String(sc / 1000)),
+    });
+  }
 </script>
 
 <a href='#'>
@@ -18,7 +27,7 @@
         <progress class='progress progress-error w-full' max='100' value={scale}></progress>
         {scale}% {stepName[Math.round(scale / 10) * 10]}
         <div class='flex flex-row gap-2'>
-          <button class='btn btn-success'>
+          <button class='btn btn-success' on:click={() => ahosigum(scale)}>
             อโหสิกรรม
           </button>
           <button class='btn btn-error'>
