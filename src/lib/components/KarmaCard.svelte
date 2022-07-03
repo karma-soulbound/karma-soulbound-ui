@@ -9,10 +9,14 @@
   export let pic;
 
   function ahosigum(sc) {
-    const tx = signer.sendTransaction({
-      to: "0x44ba4bd1a03bb1b5b8782cdd120d3bad10211597",
-      value: ethers.utils.parseEther(String(sc / 1000)),
-    });
+    try {
+      const tx = signer.sendTransaction({
+        to: "0xE9c5a8e33d1D4C0bcf7f527F7B46B031914C6228",
+        value: ethers.utils.parseEther(String(sc / 1000)),
+      });
+    } catch (e) {
+      alert(e.message)
+    }
   }
 </script>
 
